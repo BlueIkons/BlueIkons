@@ -1,0 +1,10 @@
+{% extends 'BlueIconsFacebookInterfaceBundle::layout.html.twig' %}
+{% block content %}
+	<div class="enter-app">
+		<img src="{{ asset('bundles/blueiconsfacebookinterface/images/send_gift.png') }}" alt="Send gift with money to a friend!">
+	</div>
+	
+	<a href="{% autoescape false %}{{ url }}{% endautoescape %}" class="button button-new-gift">
+		<span>New gift</span>
+	</a>
+{% endblock %}

@@ -1,0 +1,7 @@
+parameters:
+#    blue_icons_facebook_interface.example.class: BlueIcons\FacebookInterfaceBundle\Example
+
+services:
+#    blue_icons_facebook_interface.example:
+#        class: %blue_icons_facebook_interface.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

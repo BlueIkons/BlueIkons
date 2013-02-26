@@ -1,0 +1,24 @@
+BlueIcons\FacebookInterfaceBundle\Entity\PreIncoming:
+  type: entity
+  table: pre_incoming
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields: 
+    token:
+      type: string
+      length: 45
+    receiverId:
+      type: string
+      length: 45
+      column: fb_receiver_id
+    message:
+      type: string
+      length: 255
+  manyToOne:
+    item:
+      targetEntity: Items
+      joinColumn:
+        name: item_id
+        referencedColumnName: id

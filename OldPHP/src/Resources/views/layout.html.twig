@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% block stylesheets %}
+<link href="{{ asset('bundles/blueiconsfacebookinterface/css/main.css') }}" rel="stylesheet" type="text/css" />
+<!--[if lte IE 8]> 
+	<link href="{{ asset('bundles/blueiconsfacebookinterface/css/ie.css') }}" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset('bundles/blueiconsfacebookinterface/js/jquery-1.6.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/blueiconsfacebookinterface/js/jquery-ui-1.8.16.custom.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/blueiconsfacebookinterface/js/functions.js') }}"></script>
+{% endblock %}
+<title>{% block title %}Gifts - application for facebook{% endblock %}</title>
+</head>
+<body>
+  <div id="layout">
+	
+        {% block popups %}
+        {% endblock %}
+  	<div id="head">
+            {% block head %}
+                {% if isAdmin %}
+                <a class="site-part new-gift" style="right: 280px;" href="{{ path('BlueIconsFI_gift_admin') }}">Admin</a>
+                {% endif %}
+                <a class="site-part new-gift" style="right: 230px;" href="{{ path('BlueIconsFI_list_gifts') }}">My gifts</a>
+		<a class="logo" href="{{ path('BlueIconsFI_homepage') }}" style="font-size: 30px; font-family: 'CalibriRegular';">BlueIkons</a>
+		<a class="site-part new-gift" href="{{ path('BlueIconsFI_form') }}">New gift</a>
+		<span class="site-part about">About</span>
+		<div class="like">
+			<!-- Include fb button plugin here -->
+                        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fapps.facebook.com%2Fblue_ikons%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=346776708683810&locale=en_US" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:78px; height:21px;" allowTransparency="true"></iframe>
+			<!--<img src="{{ asset('bundles/blueiconsfacebookinterface/images/like-temp.jpg') }}" alt="" />-->
+		</div>
+            {% endblock %}
+	</div>
+	{% block content %}
+        {% endblock %}
+	
+  </div>
+</body>
+</html>

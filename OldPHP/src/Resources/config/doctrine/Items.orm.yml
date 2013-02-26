@@ -1,0 +1,19 @@
+BlueIcons\FacebookInterfaceBundle\Entity\Items:
+  type: entity
+  repositoryClass: BlueIcons\FacebookInterfaceBundle\Repository\ItemsRepository
+  table: items
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields: 
+    name:
+      type: string
+      length: 45
+    amount:
+      type: string
+      length: 20
+    iconPath:
+      type: string
+      length: 255
+      column: icon_path

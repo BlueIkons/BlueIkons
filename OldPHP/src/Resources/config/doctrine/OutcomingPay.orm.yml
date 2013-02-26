@@ -1,0 +1,32 @@
+BlueIcons\FacebookInterfaceBundle\Entity\OutcomingPay:
+  type: entity
+  repositoryClass: BlueIcons\FacebookInterfaceBundle\Repository\IncomingPayRepository
+  table: outcoming_pay
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields: 
+    timestamp:
+      type: datetime
+    payKey: 
+      type: string
+      length: 45
+      column: pay_key
+    receiverEmail: 
+      type: string
+      length: 100 
+      column: receiver_email
+    status: 
+      type: string
+      length: 45
+    isSended:
+      type: integer
+      column: is_sended
+  manyToOne:
+    incomingPay:
+      targetEntity: IncomingPay
+      joinColumn:
+        name: incoming_pay_id
+        referencedColumnName: id
+    

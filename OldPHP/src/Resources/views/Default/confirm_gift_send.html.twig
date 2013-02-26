@@ -1,0 +1,15 @@
+<script type="text/javascript" src="{{ asset('bundles/blueiconsfacebookinterface/js/jquery-1.6.2.min.js') }}"></script>
+<script>
+    parent.$('.overlay').html('<div class="waiting-notice">Requesting for transaction id...</div>');
+    $.ajax({
+        type: 'GET',
+        url: '{{ path('BlueIconsFI_success_gift_send', { 'token': token, 'payerId': payerId }) }}',
+        success: function (html) {
+            parent.successGiftSend(html);
+            parent.$('div[id="PPDGFrame"]').remove();
+            parent.$('.overlay').hide();
+        }
+    });
+    
+    parent.$('.mask').remove();
+</script>

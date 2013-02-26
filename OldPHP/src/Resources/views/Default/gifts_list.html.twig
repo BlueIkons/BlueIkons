@@ -1,0 +1,59 @@
+{% extends 'BlueIconsFacebookInterfaceBundle::layout.html.twig' %}
+{% block content %}
+<div id="content">
+    {% if giftsToReceive|length > 0 %}
+<h2>Gifts that waits for you:</h2>
+<table>         
+        {% for gift in giftsToReceive %}
+        <tr style=" margin-bottom: 10px;">
+                <td style="width:60px;margin-right:30px;">
+                    <img src="{{ asset('bundles/blueiconsfacebookinterface/images/' ~ gift.item.iconPath) }}" alt="" width="70px" />
+                    <div>
+                        <strong>{{ gift.item.name }}</strong>
+                        <span>${{ gift.item.amount }}</span>
+                    </div>
+                </td>
+                <td>
+                    <div style="float:left;">
+                        <img src="{{ gift.senderPhoto }}">
+                    </div>
+                    <div style="display: inline-block;">
+                        <p>{{ gift.sender }}</p>
+                        <p>{{ gift.message }}</p>
+                        <p><a href="{{ path('BlueIconsFI_get_gift', { 'giftHash': gift.hash }) }}">Get gift</a></p>
+                    </div>
+                </td>
+        </tr>
+        {% endfor %}
+</table>
+    {% endif %}
+{% if gifts|length > 0 %}
+<h2>Gifts that you received:</h2>
+
+<table >            
+        {% for gift in gifts %}
+        <tr style=" margin-bottom: 10px;">
+                <td style="width:60px;margin-right:30px;">
+                    <img src="{{ asset('bundles/blueiconsfacebookinterface/images/' ~ gift.item.iconPath) }}" alt="" width="70px" />
+                    <div>
+                        <strong>{{ gift.item.name }}</strong>
+                        <span>${{ gift.item.amount }}</span>
+                    </div>
+                </td>
+                <td>
+                    <div style="float:left;">
+                        <img src="{{ gift.senderPhoto }}">
+                    </div>
+                    <div style="display: inline-block;">
+                        <p>{{ gift.sender }}</p>
+                        <p>{{ gift.message }}</p>
+                    </div>
+                </td>
+        </tr>
+        {% endfor %}
+</table>
+{% else %}
+<div class="waiting-notice" style="display:none">You don't have any gifts yet.</div>
+{% endif %}
+</div>
+{% endblock %}

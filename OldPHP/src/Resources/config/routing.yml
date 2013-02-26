@@ -1,0 +1,51 @@
+BlueIconsFI_homepage:
+    pattern:  /facebook/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:index }
+    
+BlueIconsFI_form:
+    pattern:  /facebook/form/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:paypalForm }
+
+BlueIconsFI_confirm_gift_send:
+    pattern:  /facebook/confirm/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:confirmGiftSend }
+
+BlueIconsFI_cancel:
+    pattern:  /facebook/cancel/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:failGiftSend }
+
+BlueIconsFI_success_gift_send:
+    pattern:  /facebook/success/{token}/{payerId}
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:successGiftSend }
+    
+BlueIconsFI_get_gift:
+    pattern:  /facebook/getgift/{giftHash}/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:getGift }
+
+BlueIconsFI_get_gift_stub:
+    pattern:  /facebook/getgift/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:getGift }
+
+BlueIconsFI_list_gifts:
+    pattern:  /facebook/list/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:giftsList }
+
+BlueIconsFI_facebook_auth_redirect:
+    pattern:  /facebook/auth_redirect/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:authRedirect }
+    
+BlueIconsFI_search_friend:
+    pattern:  /facebook/searchfriend/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:searchFriend }
+    
+BlueIconsFI_reject_gift_send:
+    pattern:  /facebook/reject/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:rejectGiftSend }
+    
+BlueIconsFI_gift_admin:
+    pattern:  /facebook/admin/
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:ManualSendGiftToRecipient }
+
+BlueIconsFI_terms:
+    pattern:  /facebook/terms/{term}
+    defaults: { _controller: BlueIconsFacebookInterfaceBundle:Default:showTerms }

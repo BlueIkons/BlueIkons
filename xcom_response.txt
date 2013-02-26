@@ -1,0 +1,10 @@
+Hi Celine,
+
+Thank you for your quick response. I currently have an answer for question #1, and will have to get back to you on question #2.
+
+For #1 - There is no need for implict API, this was an error on my part, I have unchecked it.  I thought it was needed to complete the pre-approval payment.  BlueIkons does not aggregate the funds.  Below is how the money flows:
+1 - Sender completes a pre-approval for a certain amount
+2 - The receiver claims their gift by entering their PayPal email address.  Using the preapproval key from step 1, a parallel payment is performed, where 90% of the gift amount go to the receiver, and 10% of the amount go to BlueIkons.  This parallel payment is completed in the background, and the receiver is not transfered to PayPal.  BlueIkons does not aggregate the funds.  The specific call made in this step is the Adaptive Payments "PAY" call, with 2 recipients, and the preapproval key field is populated from step 1.
+
+Hopefully that sufficiently answers your question #1, and I will get back to you soon on question #2.
+Thank you

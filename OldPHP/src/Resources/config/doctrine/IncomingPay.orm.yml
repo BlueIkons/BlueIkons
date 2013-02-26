@@ -1,0 +1,47 @@
+BlueIcons\FacebookInterfaceBundle\Entity\IncomingPay:
+  type: entity
+  repositoryClass: BlueIcons\FacebookInterfaceBundle\Repository\IncomingPayRepository
+  table: incoming_pay
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields: 
+    timestamp: 
+      type: datetime
+    corellationId: 
+      type: string 
+      length: 45
+      column: corellation_id
+    token: 
+      type: string
+      length: 45
+    amount: 
+      type: integer
+    receiverId: 
+      type: string
+      length: 45
+      column: receiverId
+    status:
+      type: string
+      length: 50
+    message: 
+      type: string
+      length: 255
+    giftHash: 
+      type: string
+      length: 50
+      column: gift_hash
+  manyToOne:
+    user:
+      targetEntity: Users
+      joinColumn:
+        name: fb_user_id
+        referencedColumnName: id
+    item:
+      targetEntity: Items
+      joinColumn:
+        name: item_id
+        referencedColumnName: id
+ 
+    

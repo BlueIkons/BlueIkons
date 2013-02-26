@@ -1,0 +1,22 @@
+﻿<table>
+    <tr>
+        <td>
+            Name - THENAME
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email - THEEMAIL
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Country - THECOUNTRY
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Message - THEMESSAGE
+        </td>
+    </tr>
+</table>

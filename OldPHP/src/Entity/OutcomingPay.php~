@@ -1,0 +1,15 @@
+<?php
+namespace BlueIcons\FacebookInterfaceBundle\Entity;
+
+/**
+ * Model for pay comes from blueicons to user
+ */
+class OutcomingPay
+{
+    protected $timestamp;
+    protected $payKey;    
+    protected $receiverEmail;
+    protected $incomingPay;
+    protected $status;
+    protected $isSended;
+}

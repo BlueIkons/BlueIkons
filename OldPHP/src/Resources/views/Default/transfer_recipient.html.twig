@@ -1,0 +1,54 @@
+{% extends 'BlueIconsFacebookInterfaceBundle::layout.html.twig' %}
+{% block popups %}
+	<div style="display: block;" class="overlay"></div>
+	{% if isReceiver %}
+	<div class="popup" style="display:none;">
+		<div class="popup-head">
+			<div class="close j-popup-close"><a href="."><img src="{{ asset('bundles/blueiconsfacebookinterface/images/close.png') }}" alt="Close" /></a></div>
+			<h3>Congratulations!</h3>
+		</div>
+		<div class="popup-body">
+			<h2>Money transferred to your PayPal account</h2>
+                        <p><strong>PayPal transactions ID: <span id="corellation-id"></span></strong></p>
+			<div class="popup-fb-like">
+				<!--<img src="{{ asset('bundles/blueiconsfacebookinterface/images/like-temp.jpg') }}" alt="" />-->
+                                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fapps.facebook.com%2Fblue_ikons%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=346776708683810&locale=en_US" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:78px; height:21px;" allowTransparency="true"></iframe>
+			</div>
+		</div>
+		<div class="buttons">
+			<a class="button-mini" href="{{ path('BlueIconsFI_form', {'id': sender.id}) }}">Send a reciprocal gift</a>
+			<a class="button-close j-popup-close" href="."><img src="{{ asset('bundles/blueiconsfacebookinterface/images/close-button.png') }}" alt="Close" /></a>
+		</div>
+	</div>
+        {% endif %}
+{% endblock %}
+{% block content %}
+		<h2 class="centered">
+                    {% if isReceiver %}
+                    You have 
+                    {% else %}
+                    {{ sender.receiver }} has 
+                    {% endif %}
+                    received a gift from {{ sender.name }}
+                </h2>
+		
+		<div class="my-gift">
+			<img src="{{ asset('bundles/blueiconsfacebookinterface/images/' ~ item.iconPath) }}" alt="" />
+			<strong>{{ item.name }}</strong>
+			<span>${{ item.amount }}</span>
+		</div>
+		{% if isReceiver and not isReceived %}
+		<div class="fast-reg">
+			<form>
+				<p>Please, specify your paypal account to get a gift:</p>
+				<input class="j-textfield text-field-email" type="text" id="email" name="email" rel="E-mail" />
+				<span class="reg"><a href="https://www.paypal.com/ru/cgi-bin/webscr?cmd=_registration-run" target="_blank">3 minute registration</a></span>
+				<a href="#" class="button button-get-gift" id="get-gift">
+					<span>Get a gift</span>
+				</a>
+			</form>
+		</div>
+                {% endif %}
+		<div class="clearfix"></div>
+{% endblock %}
+

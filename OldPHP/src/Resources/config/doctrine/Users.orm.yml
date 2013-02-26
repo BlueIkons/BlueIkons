@@ -1,0 +1,13 @@
+BlueIcons\FacebookInterfaceBundle\Entity\Users:
+  type: entity
+  repositoryClass: BlueIcons\FacebookInterfaceBundle\Repository\UsersRepository
+  table: users
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+  fields: 
+    user:
+      type: string
+      length: 45
+      column: fb_user

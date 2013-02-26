@@ -1,0 +1,179 @@
+﻿/*-- __Reset default styles
+------------------------------------------------------------*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { padding: 0; margin: 0; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+table { border-collapse: collapse; border-spacing: 0; }
+table, fieldset, img { border: 0; }
+address, caption, cite, code, dfn, th, var { font-weight: normal; font-style: normal; }
+caption, th { text-align: left; }
+tr { vertical-align: top; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+input, textarea, select, button { font-family: inherit; font-size: 100%; }
+textarea { overflow: auto; resize: vertical; }
+button { width: auto; overflow: visible; }
+hr { height: 1px; display: block; margin: 1em 0; border: 0; border-top: 1px solid #ccc; }
+img { vertical-align: bottom; }
+a:active { outline: 0; }
+
+.padding{ height: 100px; }
+
+.disabled{ -khtml-opacity: .40; -moz-opacity: .40; filter: alpha(opacity=40); opacity: .40; -moz-user-select: none; -khtml-user-select: none; user-select: none; cursor: default !important; }
+.disabled *{ cursor: default !important; }
+
+/*-- __Custom font definition
+------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'FlowerchildPlain';
+    src: url('./fonts/flowerchild-plain-webfont.eot');
+    src: url('./fonts/flowerchild-plain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/flowerchild-plain-webfont.woff') format('woff'),
+         url('./fonts/flowerchild-plain-webfont.ttf') format('truetype'),
+         url('./fonts/flowerchild-plain-webfont.svg#FlowerchildPlain') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CalibriRegular';
+    src: url('./fonts/calibri-webfont.eot');
+    src: url('./fonts/calibri-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/calibri-webfont.woff') format('woff'),
+         url('./fonts/calibri-webfont.ttf') format('truetype'),
+         url('./fonts/calibri-webfont.svg#CalibriRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-- __Common
+------------------------------------------------------------*/
+
+*{ margin:0px; padding:0px; }
+*:focus{ outline: none; }
+body{ background: #fff; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #26261f; }
+a img{ border: none; }
+.clearfix{ clear: both; height: 0px; overflow: hidden; }
+a:link, a:visited{ color: #3b5998; text-decoration: none; }
+a:hover{ text-decoration: underline;  }
+textarea{ resize: none; }
+button::-moz-focus-inner { padding: 0; border: 0; }
+
+h2{ font-size: 24px; color: #f49300; margin-bottom: 10px; margin-left: -2px; }
+h2.padded{ padding-top: 25px; }
+h2.centered{ text-align: center; padding-top: 20px; margin-bottom: 52px; }
+
+input.placeholder, textarea.placeholder{ color: #b3b4b5 !important; }
+
+/* Button */
+.button-new-gift{ width: 140px; margin: 0 auto; }
+.button-get-gift{ width: 140px; }
+a.button{ display: block; background: url(../images/button-left.jpg) left top no-repeat; color: #e20e30; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 #ffefc6; }
+	a.button span{ display: block; cursor: pointer; height: 28px; padding-top: 8px; text-align: center; background: url(../images/button-right.jpg) right top no-repeat; font-family: 'CalibriRegular'; font-size: 19px !important; }
+a.button-paypal{ width: 200px; }	
+	a.button-paypal span{ font-size: 18px !important; }
+.buttons{ position: absolute; width: 428px; left: 28px; bottom: 26px; }
+	.buttons .button-mini{ float: left; display: block; background: url(../images/button-mini.png) top no-repeat; color: #e20e30; font-size: 14px; font-weight: bold; text-decoration: none; text-shadow: 0 1px 0 #ffefc6; width: 160px; height: 19px; padding-top: 5px; font-family: 'CalibriRegular'; text-align: center; }
+	.buttons .button-close{ display: block; float: right; }
+ 
+/* Custom text field */
+.text-field-email{ width: 285px; }
+.text-field-container{ height: 34px; overflow: hidden; background: url(../images/input.png) right bottom no-repeat; padding-right: 4px; }
+	.text-field-container div{ height: 34px; padding: 0 6px 0 10px; overflow: hidden; background: url(../images/input.png) left top no-repeat; }
+		.text-field-container div input{ border-width: 0; background: none; height: 34px; font-size: 16px; width: 100%; color: #404346; font-family: Arial, Helvetica, sans-serif; }
+/* /Custom text field */
+
+/* Textarea */
+.textarea{ margin-top: 21px; width: 720px; border-bottom: #f8f8f8 solid 1px; border-right: #f8f8f8 solid 1px; border-radius: 3px; margin-bottom: 36px; }
+textarea{ width: 699px; height: 40px; border: none; border-bottom: #ececec solid 1px; border-right: #ececec solid 1px; border-radius: 3px; padding: 10px; background: #FFF !important; font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #404346; }
+.disabled-textarea textarea{ border: #c2cee1 solid 1px; color: #e1e1e1 !important; cursor: default; }
+input[disabled]{ color: #e1e1e1 !important; cursor: default; }
+
+/* Custom autocomplete */
+.text-acfield{ margin-top: 15px; height: 34px; overflow: hidden; background: url(../images/autocomplete.png) left top no-repeat; overflow: hidden; }
+	.text-acfield div{ height: 34px; overflow: hidden; background: url(../images/autocomplete.png) right -34px no-repeat; }
+		.text-acfield div input{ border-width: 0; background: none; height: 34px; font-size: 16px; color: #404346; font-family: Arial, Helvetica, sans-serif; }
+.text-field-middle{ width: 285px; }
+	.text-field-middle input{ width: 240px; padding: 0 35px 0 10px; }
+/* /Custom autocomplete */
+ 
+/*-- __Head
+------------------------------------------------------------*/
+
+#head{ height: 63px; position: relative; z-index: 5; }
+	#head .logo{ display: block; position: absolute; left: 30px; top: 13px; }
+	
+	#head .site-part{ display: block; position: absolute; top: 24px; text-decoration: none; }
+		#head a.site-part:hover{ text-decoration: underline; }
+	#head span.site-part{ font-weight: bold; color: #26261f; }
+	#head .new-gift{ right: 179px; }		
+	#head .about{ right: 131px; }
+	#head .like{ position: absolute; top: 20px; right: 30px; }
+
+
+/*-- __Main
+------------------------------------------------------------*/
+
+#layout{ width: 780px; min-height: 600px; position: relative; }
+
+.overlay{ display: none; background: url(../images/overlay.png); width: 780px; height: 100%; position: absolute; left: 0; top: 0; z-index: 10; }
+.waiting-notice{ position: absolute; width: 100%; left: 0; top: 263px; text-align: center; z-index: 15; font-size: 28px; color: #383832; font-family: 'CalibriRegular'; }
+
+.enter-app{ margin: 48px 0 45px 3px; padding-right: 3px; padding-top: 305px; font-size: 40px; text-align: center; font-family: 'FlowerchildPlain'; color: #e00d30; background: url(../images/gift.jpg) center top no-repeat; font-weight: bold; }
+
+/*-- __Content
+------------------------------------------------------------*/
+
+#content{ padding: 30px 30px 0; }
+
+.gifts{ margin-top: 18px; padding-left: 6px; }
+	.gifts li{ text-align: center; float: left; width: 178px; cursor: pointer; }
+	.gifts li.checked{ background: url(../images/check.png) right bottom no-repeat; }
+		.gifts li img{ display: block; margin: 0 auto 10px; }
+		.gifts li strong{ display: block; color: #3a5998; font-weight: bold; font-size: 16px; margin-bottom: 7px; }
+		.gifts li span{ display: block; padding-bottom: 3px; }
+
+#person{ margin-bottom: 28px; }		
+#person div{ padding-top: 15px; height: 50px; width: 285px; position: relative; }
+	#person div span{ font-size: 13px; color: #3a5998; display: block; float: left; padding: 17px 0 0 10px; }
+	#person div img{ display: block; float: left; }
+	#person div .del{ display: none; padding: 0; height: 11px; width: 11px; position: absolute; right: 5px; top: 15px; background: url(../images/del.gif) top no-repeat; cursor: pointer; }
+	#person div:hover .del{ display: block; }
+		
+.ui-autocomplete { position: absolute; cursor: default; border: #eee solid 4px; border-radius: 4px; }	
+
+* html .ui-autocomplete { width: 1px; }
+
+.ui-menu { list-style: none; margin: 0; display: block; float: left; background: #FFF; }
+.ui-menu .ui-menu { margin-top: -3px; }
+.ui-menu .ui-menu-item { margin: 0; padding: 0; zoom: 1; float: left; clear: left; width: 100%; }
+.ui-menu .ui-menu-item a { text-decoration: none; display: block; padding: 1px; height: 50px; line-height: 1.5; zoom: 1; }
+.ui-menu .ui-menu-item a span{ display: block; float: left; padding: 17px 0 0 10px; }
+.ui-menu .ui-menu-item a img{ display: block; float: left; }
+.ui-menu .ui-menu-item a.ui-state-hover, .ui-menu .ui-menu-item a.ui-state-active { font-weight: normal; background: #6d84b4; color: #FFF; }
+
+/* Popup */
+.popup{ position: absolute; z-index: 15; top: 100px; left: 50%; margin-left: -242px; width: 484px; height: 314px; background: url(../images/popup.png) top no-repeat; }
+.popup-head{ position: relative; padding: 15px 20px; }
+	.popup-head h3{ padding-left: 24px;  font-family: Tahoma, Arial, Helvetica, sans-serif; font-weight: normal; font-size: 16px; color: #383832; background: url(../images/conf.png) left no-repeat; }
+	.popup-head .close{ position: absolute; top: 7px; right: 13px; cursor: pointer; }
+.popup-body{ padding: 18px 28px 0; position: relative; }
+	.popup-body p{ font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; color: #333; margin: 20px 0; }
+	.popup-fb-like{ margin: 25px 0 35px; }
+	
+/* My gift */
+.my-gift{ float: left; width: 320px; }
+	.my-gift img{ display: block; margin: 0 auto 30px; }
+	.my-gift strong{ display: block; text-align: center; text-align: center; font-family: 'FlowerchildPlain'; color: #e00d30; font-weight: bold; font-size: 38px; }
+	.my-gift span{ display: block; font-size: 12px; color: #3a5998; padding-top: 10px; text-align: center; }
+	
+.fast-reg{ float: left; padding: 66px 0 0 38px; }
+	.fast-reg p{ font-size: 13px; color: #333; margin-bottom: 10px; }
+	.fast-reg span.reg{ display: block; margin: 10px 0 30px; font-size: 13px; }
+
+
+
+

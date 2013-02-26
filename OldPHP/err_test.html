@@ -1,0 +1,685 @@
+PHPUnit 3.6.9 by Sebastian Bergmann.
+
+Configuration read from /var/www/blue-icons/app/phpunit.xml
+
+.<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <title>    Notice: Undefined index: HTTP_HOST in /var/www/blue-icons/vendor/lib/Facebook/base_facebook.php line 982 (500 Internal Server Error)
+</title>
+        <link href="/bundles/framework/css/exception_layout.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/bundles/framework/css/exception.css" rel="stylesheet" type="text/css" media="all" />
+    </head>
+    <body>
+        <div id="content">
+            <div class="header clear_fix">
+                <div class="header_logo">
+                    <img src="/bundles/framework/images/logo_symfony.gif" alt="Symfony" />
+                </div>
+
+                <div class="search">
+                  <form method="get" action="http://symfony.com/search">
+                    <div class="form_row">
+
+                      <label for="search_id">
+                          <img src="/bundles/framework/images/grey_magnifier.png" alt="Search on Symfony website" />
+                      </label>
+
+                      <input name="q" id="search_id" type="search" placeholder="Search on Symfony website" />
+
+                      <button type="submit">
+                        <span class="border_l">
+                          <span class="border_r">
+                            <span class="btn_bg">OK</span>
+                          </span>
+                        </span>
+                      </button>
+                    </div>
+                   </form>
+                </div>
+            </div>
+
+                <div class="sf-exceptionreset">
+
+    <div class="block_exception">
+        <div class="block_exception_detected clear_fix">
+            <div class="illustration_exception">
+                <img alt="Exception detected!" src="/bundles/framework/images/exception_detected.gif"/>
+            </div>
+            <div class="text_exception">
+
+                <div class="open_quote">
+                    <img alt="" src="/bundles/framework/images/open_quote.gif"/>
+                </div>
+
+                <h1>
+                    Notice: Undefined index: HTTP_HOST in /var/www/blue-icons/vendor/lib/Facebook/base_facebook.php line 982
+                </h1>
+
+                <div>
+                    <strong>500</strong> Internal Server Error - <abbr title="ErrorException">ErrorException</abbr>
+                </div>
+
+                                
+                <div class="close_quote">
+                    <img alt="" src="/bundles/framework/images/close_quote.gif"/>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+            <div class="block">
+            <h2>Stack Trace</h2>
+    
+    <a id="traces_link_0"></a>
+    <ol class="traces list_exception" id="traces_0" style="display: block">
+                    <li>
+                
+    
+    in /var/www/blue-icons/vendor/symfony/src/Symfony/Component/HttpKernel/Debug/ErrorHandler.php at line 65&nbsp;
+    <a href="#" onclick="toggle('trace_0_0'); switchIcons('icon_0_0_open', 'icon_0_0_close'); return false;"><img class="toggle" id="icon_0_0_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: display" /><img class="toggle" id="icon_0_0_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: hidden; margin-left: -18px" /></a>    <div id="trace_0_0" style="display: block" class="trace">
+        <ol start="62"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(<span style="color: #0000BB">error_reporting</span><span style="color: #007700">()&nbsp;&amp;&nbsp;</span><span style="color: #0000BB">$level&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">level&nbsp;</span><span style="color: #007700">&amp;&nbsp;</span><span style="color: #0000BB">$level</span><span style="color: #007700">)&nbsp;{</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;\<span style="color: #0000BB">ErrorException</span><span style="color: #007700">(</span><span style="color: #0000BB">sprintf</span><span style="color: #007700">(</span><span style="color: #DD0000">'%s:&nbsp;%s&nbsp;in&nbsp;%s&nbsp;line&nbsp;%d'</span><span style="color: #007700">,&nbsp;isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">levels</span><span style="color: #007700">[</span><span style="color: #0000BB">$level</span><span style="color: #007700">])&nbsp;?&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">levels</span><span style="color: #007700">[</span><span style="color: #0000BB">$level</span><span style="color: #007700">]&nbsp;:&nbsp;</span><span style="color: #0000BB">$level</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$file</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$line</span><span style="color: #007700">));</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<span style="color: #0000BB">false</span><span style="color: #007700">;</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Component\HttpKernel\Debug\ErrorHandler">ErrorHandler</abbr>
+        -&gt;handle
+    </strong>
+    ('8', 'Undefined index: HTTP_HOST', '/var/www/blue-icons/vendor/lib/Facebook/base_facebook.php', '982', <em>array</em>('protocol' => 'http://'))
+
+    <br />
+    in /var/www/blue-icons/vendor/lib/Facebook/base_facebook.php at line 982&nbsp;
+    <a href="#" onclick="toggle('trace_0_1'); switchIcons('icon_0_1_open', 'icon_0_1_close'); return false;"><img class="toggle" id="icon_0_1_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_1_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_1" style="display: none" class="trace">
+        <ol start="979"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$protocol&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'http://'</span><span style="color: #007700">;</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$currentUrl&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$protocol&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$_SERVER</span><span style="color: #007700">[</span><span style="color: #DD0000">'HTTP_HOST'</span><span style="color: #007700">]&nbsp;.&nbsp;</span><span style="color: #0000BB">$_SERVER</span><span style="color: #007700">[</span><span style="color: #DD0000">'REQUEST_URI'</span><span style="color: #007700">];</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$parts&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">parse_url</span><span style="color: #007700">(</span><span style="color: #0000BB">$currentUrl</span><span style="color: #007700">);</span></code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$query&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">;</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Facebook\BaseFacebook">BaseFacebook</abbr>
+        -&gt;getCurrentUrl
+    </strong>
+    ()
+
+    <br />
+    in /var/www/blue-icons/vendor/lib/Facebook/base_facebook.php at line 483&nbsp;
+    <a href="#" onclick="toggle('trace_0_2'); switchIcons('icon_0_2_open', 'icon_0_2_close'); return false;"><img class="toggle" id="icon_0_2_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_2_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_2" style="display: none" class="trace">
+        <ol start="480"><li><code>&nbsp;&nbsp;&nbsp;*/</code></li>
+<li><code>&nbsp;&nbsp;<span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getLoginUrl</span><span style="color: #007700">(</span><span style="color: #0000BB">$params</span><span style="color: #007700">=array())&nbsp;{</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">establishCSRFTokenState</span><span style="color: #007700">();</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$currentUrl&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getCurrentUrl</span><span style="color: #007700">();</span></code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">//&nbsp;if&nbsp;'scope'&nbsp;is&nbsp;passed&nbsp;as&nbsp;an&nbsp;array,&nbsp;convert&nbsp;to&nbsp;comma&nbsp;separated&nbsp;list</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$scopeParams&nbsp;</span><span style="color: #007700">=&nbsp;isset(</span><span style="color: #0000BB">$params</span><span style="color: #007700">[</span><span style="color: #DD0000">'scope'</span><span style="color: #007700">])&nbsp;?&nbsp;</span><span style="color: #0000BB">$params</span><span style="color: #007700">[</span><span style="color: #DD0000">'scope'</span><span style="color: #007700">]&nbsp;:&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">;</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Facebook\BaseFacebook">BaseFacebook</abbr>
+        -&gt;getLoginUrl
+    </strong>
+    (<em>array</em>('scope' => 'publish_stream', 'redirect_uri' => 'http://localhost/facebook/auth_redirect/?path=form'))
+
+    <br />
+    in /var/www/blue-icons/src/BlueIcons/FacebookInterfaceBundle/Controller/DefaultController.php at line 28&nbsp;
+    <a href="#" onclick="toggle('trace_0_3'); switchIcons('icon_0_3_open', 'icon_0_3_close'); return false;"><img class="toggle" id="icon_0_3_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_3_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_3" style="display: none" class="trace">
+        <ol start="25"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$url&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'/facebook/form/'</span><span style="color: #007700">;</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!<span style="color: #0000BB">$userId</span><span style="color: #007700">)&nbsp;{</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$baseUrl&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getBaseUrl</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">container</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getParameter</span><span style="color: #007700">(</span><span style="color: #DD0000">'facebook.bi_server_path'</span><span style="color: #007700">));</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$url&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$fb</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getLoginUrl</span><span style="color: #007700">(array(</span><span style="color: #DD0000">'scope'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'publish_stream'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'redirect_uri'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$baseUrl</span><span style="color: #007700">.</span><span style="color: #DD0000">'auth_redirect/?path=form'</span><span style="color: #007700">));</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$url&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">'?token='</span><span style="color: #007700">.</span><span style="color: #0000BB">$fb</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getAccessToken</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="BlueIcons\FacebookInterfaceBundle\Controller\DefaultController">DefaultController</abbr>
+        -&gt;indexAction
+    </strong>
+    ()
+
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title=""></abbr>
+        call_user_func_array
+    </strong>
+    (<em>array</em>(<em>object</em>(<abbr title="BlueIcons\FacebookInterfaceBundle\Controller\DefaultController">DefaultController</abbr>), 'indexAction'), <em>array</em>())
+
+    <br />
+    in /var/www/blue-icons/vendor/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php at line 117&nbsp;
+    <a href="#" onclick="toggle('trace_0_5'); switchIcons('icon_0_5_open', 'icon_0_5_close'); return false;"><img class="toggle" id="icon_0_5_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_5_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_5" style="display: none" class="trace">
+        <ol start="114"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$arguments&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">resolver</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getArguments</span><span style="color: #007700">(</span><span style="color: #0000BB">$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$controller</span><span style="color: #007700">);</span></code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">//&nbsp;call&nbsp;controller</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">call_user_func_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$controller</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$arguments</span><span style="color: #007700">);</span></code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">//&nbsp;view</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">$response&nbsp;</span><span style="color: #007700">instanceof&nbsp;</span><span style="color: #0000BB">Response</span><span style="color: #007700">)&nbsp;{</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Component\HttpKernel\HttpKernel">HttpKernel</abbr>
+        -&gt;handleRaw
+    </strong>
+    (<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>), '1')
+
+    <br />
+    in /var/www/blue-icons/vendor/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php at line 71&nbsp;
+    <a href="#" onclick="toggle('trace_0_6'); switchIcons('icon_0_6_open', 'icon_0_6_close'); return false;"><img class="toggle" id="icon_0_6_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_6_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_6" style="display: none" class="trace">
+        <ol start="68"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">handle</span><span style="color: #007700">(</span><span style="color: #0000BB">Request&nbsp;$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$type&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">HttpKernelInterface</span><span style="color: #007700">::</span><span style="color: #0000BB">MASTER_REQUEST</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$catch&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">)</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">handleRaw</span><span style="color: #007700">(</span><span style="color: #0000BB">$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$type</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(\<span style="color: #0000BB">Exception&nbsp;$e</span><span style="color: #007700">)&nbsp;{</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(<span style="color: #0000BB">false&nbsp;</span><span style="color: #007700">===&nbsp;</span><span style="color: #0000BB">$catch</span><span style="color: #007700">)&nbsp;{</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;<span style="color: #0000BB">$e</span><span style="color: #007700">;</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Component\HttpKernel\HttpKernel">HttpKernel</abbr>
+        -&gt;handle
+    </strong>
+    (<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>), '1', <em>true</em>)
+
+    <br />
+    in /var/www/blue-icons/vendor/symfony/src/Symfony/Bundle/FrameworkBundle/HttpKernel.php at line 46&nbsp;
+    <a href="#" onclick="toggle('trace_0_7'); switchIcons('icon_0_7_open', 'icon_0_7_close'); return false;"><img class="toggle" id="icon_0_7_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_7_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_7" style="display: none" class="trace">
+        <ol start="43"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">container</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">set</span><span style="color: #007700">(</span><span style="color: #DD0000">'request'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'request'</span><span style="color: #007700">);</span></code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">handle</span><span style="color: #007700">(</span><span style="color: #0000BB">$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$type</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$catch</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(\<span style="color: #0000BB">Exception&nbsp;$e</span><span style="color: #007700">)&nbsp;{</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">container</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">leaveScope</span><span style="color: #007700">(</span><span style="color: #DD0000">'request'</span><span style="color: #007700">);</span></code></li>
+<li><code></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Bundle\FrameworkBundle\HttpKernel">HttpKernel</abbr>
+        -&gt;handle
+    </strong>
+    (<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>), '1', <em>true</em>)
+
+    <br />
+    in <abbr title="/var/www/blue-icons/app/">kernel.root_dir</abbr>/bootstrap.php.cache at line 547&nbsp;
+    <a href="#" onclick="toggle('trace_0_8'); switchIcons('icon_0_8_open', 'icon_0_8_close'); return false;"><img class="toggle" id="icon_0_8_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_8_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_8" style="display: none" class="trace">
+        <ol start="544"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">boot</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getHttpKernel</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">handle</span><span style="color: #007700">(</span><span style="color: #0000BB">$request</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$type</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$catch</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;</code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Component\HttpKernel\Kernel">Kernel</abbr>
+        -&gt;handle
+    </strong>
+    (<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>))
+
+    <br />
+    in /var/www/blue-icons/vendor/symfony/src/Symfony/Bundle/FrameworkBundle/Client.php at line 82&nbsp;
+    <a href="#" onclick="toggle('trace_0_9'); switchIcons('icon_0_9_open', 'icon_0_9_close'); return false;"><img class="toggle" id="icon_0_9_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_9_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_9" style="display: none" class="trace">
+        <ol start="79"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">hasPerformedRequest&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">kernel</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">handle</span><span style="color: #007700">(</span><span style="color: #0000BB">$request</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">/**</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Bundle\FrameworkBundle\Client">Client</abbr>
+        -&gt;doRequest
+    </strong>
+    (<em>object</em>(<abbr title="Symfony\Component\HttpFoundation\Request">Request</abbr>))
+
+    <br />
+    in /var/www/blue-icons/vendor/symfony/src/Symfony/Component/BrowserKit/Client.php at line 262&nbsp;
+    <a href="#" onclick="toggle('trace_0_10'); switchIcons('icon_0_10_open', 'icon_0_10_close'); return false;"><img class="toggle" id="icon_0_10_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_10_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_10" style="display: none" class="trace">
+        <ol start="259"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">insulated</span><span style="color: #007700">)&nbsp;{</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">doRequestInProcess</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">request</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">doRequest</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">request</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$response&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">filterResponse</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">response</span><span style="color: #007700">);</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="Symfony\Component\BrowserKit\Client">Client</abbr>
+        -&gt;request
+    </strong>
+    ('GET', '/facebook/')
+
+    <br />
+    in /var/www/blue-icons/src/BlueIcons/FacebookInterfaceBundle/Tests/Controller/DefaultControllerTest.php at line 13&nbsp;
+    <a href="#" onclick="toggle('trace_0_11'); switchIcons('icon_0_11_open', 'icon_0_11_close'); return false;"><img class="toggle" id="icon_0_11_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_11_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_11" style="display: none" class="trace">
+        <ol start="10"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$client&nbsp;</span><span style="color: #007700">=&nbsp;static::</span><span style="color: #0000BB">createClient</span><span style="color: #007700">();</span></code></li>
+<li><code></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$crawler&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$client</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">request</span><span style="color: #007700">(</span><span style="color: #DD0000">'GET'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/facebook/'</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">//$this-&gt;assertEquals(200,$client-&gt;getResponse()-&gt;getStatusCode(),"HTTP&nbsp;200");</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="BlueIcons\FacebookInterfaceBundle\Tests\Controller\DefaultControllerTest">DefaultControllerTest</abbr>
+        -&gt;testIndex
+    </strong>
+    ()
+
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="ReflectionMethod">ReflectionMethod</abbr>
+        -&gt;invokeArgs
+    </strong>
+    (<em>object</em>(<abbr title="BlueIcons\FacebookInterfaceBundle\Tests\Controller\DefaultControllerTest">DefaultControllerTest</abbr>), <em>array</em>())
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestCase.php at line 942&nbsp;
+    <a href="#" onclick="toggle('trace_0_13'); switchIcons('icon_0_13_open', 'icon_0_13_close'); return false;"><img class="toggle" id="icon_0_13_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_13_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_13" style="display: none" class="trace">
+        <ol start="939"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$testResult&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$method</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">invokeArgs</span><span style="color: #007700">(</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">array_merge</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">data</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dependencyInput</span><span style="color: #007700">)</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch&nbsp;(<span style="color: #0000BB">Exception&nbsp;$e</span><span style="color: #007700">)&nbsp;{</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestCase">PHPUnit_Framework_TestCase</abbr>
+        -&gt;runTest
+    </strong>
+    ()
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestCase.php at line 804&nbsp;
+    <a href="#" onclick="toggle('trace_0_14'); switchIcons('icon_0_14_open', 'icon_0_14_close'); return false;"><img class="toggle" id="icon_0_14_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_14_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_14" style="display: none" class="trace">
+        <ol start="801"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">setUp</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">checkRequirements</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">assertPreConditions</span><span style="color: #007700">();</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">testResult&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">runTest</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">verifyMockObjects</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">assertPostConditions</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">status&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">PHPUnit_Runner_BaseTestRunner</span><span style="color: #007700">::</span><span style="color: #0000BB">STATUS_PASSED</span><span style="color: #007700">;</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestCase">PHPUnit_Framework_TestCase</abbr>
+        -&gt;runBare
+    </strong>
+    ()
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestResult.php at line 650&nbsp;
+    <a href="#" onclick="toggle('trace_0_15'); switchIcons('icon_0_15_open', 'icon_0_15_close'); return false;"><img class="toggle" id="icon_0_15_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_15_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_15" style="display: none" class="trace">
+        <ol start="647"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$invoker&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">PHP_Invoker</span><span style="color: #007700">;</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$invoker</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">invoke</span><span style="color: #007700">(array(</span><span style="color: #0000BB">$test</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'runBare'</span><span style="color: #007700">),&nbsp;array(),&nbsp;</span><span style="color: #0000BB">$_timeout</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$test</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">runBare</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestResult">PHPUnit_Framework_TestResult</abbr>
+        -&gt;run
+    </strong>
+    (<em>object</em>(<abbr title="BlueIcons\FacebookInterfaceBundle\Tests\Controller\DefaultControllerTest">DefaultControllerTest</abbr>))
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestCase.php at line 751&nbsp;
+    <a href="#" onclick="toggle('trace_0_16'); switchIcons('icon_0_16_open', 'icon_0_16_close'); return false;"><img class="toggle" id="icon_0_16_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_16_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_16" style="display: none" class="trace">
+        <ol start="748"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$php&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">PHPUnit_Util_PHP</span><span style="color: #007700">::</span><span style="color: #0000BB">factory</span><span style="color: #007700">();</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$php</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">runJob</span><span style="color: #007700">(</span><span style="color: #0000BB">$template</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">render</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$result</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$result</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">run</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">useErrorHandler&nbsp;</span><span style="color: #007700">!==&nbsp;</span><span style="color: #0000BB">NULL</span><span style="color: #007700">)&nbsp;{</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestCase">PHPUnit_Framework_TestCase</abbr>
+        -&gt;run
+    </strong>
+    (<em>object</em>(<abbr title="PHPUnit_Framework_TestResult">PHPUnit_Framework_TestResult</abbr>))
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestSuite.php at line 772&nbsp;
+    <a href="#" onclick="toggle('trace_0_17'); switchIcons('icon_0_17_open', 'icon_0_17_close'); return false;"><img class="toggle" id="icon_0_17_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_17_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_17" style="display: none" class="trace">
+        <ol start="769"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">runTest</span><span style="color: #007700">(</span><span style="color: #0000BB">PHPUnit_Framework_Test&nbsp;$test</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">PHPUnit_Framework_TestResult&nbsp;$result</span><span style="color: #007700">)</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$test</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">run</span><span style="color: #007700">(</span><span style="color: #0000BB">$result</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">/**</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestSuite">PHPUnit_Framework_TestSuite</abbr>
+        -&gt;runTest
+    </strong>
+    (<em>object</em>(<abbr title="BlueIcons\FacebookInterfaceBundle\Tests\Controller\DefaultControllerTest">DefaultControllerTest</abbr>), <em>object</em>(<abbr title="PHPUnit_Framework_TestResult">PHPUnit_Framework_TestResult</abbr>))
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestSuite.php at line 745&nbsp;
+    <a href="#" onclick="toggle('trace_0_18'); switchIcons('icon_0_18_open', 'icon_0_18_close'); return false;"><img class="toggle" id="icon_0_18_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_18_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_18" style="display: none" class="trace">
+        <ol start="742"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$test</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">setRunTestInSeparateProcess</span><span style="color: #007700">(</span><span style="color: #0000BB">$processIsolation</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">runTest</span><span style="color: #007700">(</span><span style="color: #0000BB">$test</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$result</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestSuite">PHPUnit_Framework_TestSuite</abbr>
+        -&gt;run
+    </strong>
+    (<em>object</em>(<abbr title="PHPUnit_Framework_TestResult">PHPUnit_Framework_TestResult</abbr>), <em>false</em>, <em>array</em>(), <em>array</em>(), <em>false</em>)
+
+    <br />
+    in /usr/share/php/PHPUnit/Framework/TestSuite.php at line 705&nbsp;
+    <a href="#" onclick="toggle('trace_0_19'); switchIcons('icon_0_19_open', 'icon_0_19_close'); return false;"><img class="toggle" id="icon_0_19_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_19_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_19" style="display: none" class="trace">
+        <ol start="702"><li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$test</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">run</span><span style="color: #007700">(</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$result</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$filter</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$groups</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$excludeGroups</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$processIsolation</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;else&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$runTest&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">;</span></code></li>
+<li><code></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_Framework_TestSuite">PHPUnit_Framework_TestSuite</abbr>
+        -&gt;run
+    </strong>
+    (<em>object</em>(<abbr title="PHPUnit_Framework_TestResult">PHPUnit_Framework_TestResult</abbr>), <em>false</em>, <em>array</em>(), <em>array</em>(), <em>false</em>)
+
+    <br />
+    in /usr/share/php/PHPUnit/TextUI/TestRunner.php at line 325&nbsp;
+    <a href="#" onclick="toggle('trace_0_20'); switchIcons('icon_0_20_open', 'icon_0_20_close'); return false;"><img class="toggle" id="icon_0_20_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_20_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_20" style="display: none" class="trace">
+        <ol start="322"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$arguments</span><span style="color: #007700">[</span><span style="color: #DD0000">'groups'</span><span style="color: #007700">],</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$arguments</span><span style="color: #007700">[</span><span style="color: #DD0000">'excludeGroups'</span><span style="color: #007700">],</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$arguments</span><span style="color: #007700">[</span><span style="color: #DD0000">'processIsolation'</span><span style="color: #007700">]</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset(<span style="color: #0000BB">$suite</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$result</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">flushListeners</span><span style="color: #007700">();</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_TextUI_TestRunner">PHPUnit_TextUI_TestRunner</abbr>
+        -&gt;doRun
+    </strong>
+    (<em>object</em>(<abbr title="PHPUnit_Framework_TestSuite">PHPUnit_Framework_TestSuite</abbr>), <em>array</em>('listGroups' => <em>false</em>, 'loader' => <em>null</em>, 'useDefaultConfiguration' => <em>true</em>, 'configuration' => '/var/www/blue-icons/app/phpunit.xml'))
+
+    <br />
+    in /usr/share/php/PHPUnit/TextUI/Command.php at line 187&nbsp;
+    <a href="#" onclick="toggle('trace_0_21'); switchIcons('icon_0_21_open', 'icon_0_21_close'); return false;"><img class="toggle" id="icon_0_21_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_21_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_21" style="display: none" class="trace">
+        <ol start="184"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;unset(<span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">arguments</span><span style="color: #007700">[</span><span style="color: #DD0000">'testFile'</span><span style="color: #007700">]);</span></code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{</code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$runner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">doRun</span><span style="color: #007700">(</span><span style="color: #0000BB">$suite</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">arguments</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;catch&nbsp;(<span style="color: #0000BB">PHPUnit_Framework_Exception&nbsp;$e</span><span style="color: #007700">)&nbsp;{</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_TextUI_Command">PHPUnit_TextUI_Command</abbr>
+        -&gt;run
+    </strong>
+    (<em>array</em>('/usr/bin/phpunit', '-c', 'app/', 'src/BlueIcons'), <em>true</em>)
+
+    <br />
+    in /usr/share/php/PHPUnit/TextUI/Command.php at line 125&nbsp;
+    <a href="#" onclick="toggle('trace_0_22'); switchIcons('icon_0_22_open', 'icon_0_22_close'); return false;"><img class="toggle" id="icon_0_22_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_22_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_22" style="display: none" class="trace">
+        <ol start="122"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #007700">public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">main</span><span style="color: #007700">(</span><span style="color: #0000BB">$exit&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">)</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0000BB">$command&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">PHPUnit_TextUI_Command</span><span style="color: #007700">;</span></code></li>
+<li class="selected"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;<span style="color: #0000BB">$command</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">run</span><span style="color: #007700">(</span><span style="color: #0000BB">$_SERVER</span><span style="color: #007700">[</span><span style="color: #DD0000">'argv'</span><span style="color: #007700">],&nbsp;</span><span style="color: #0000BB">$exit</span><span style="color: #007700">);</span></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></li>
+<li><code></code></li>
+<li><code>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #FF8000">/**</span></code></li></ol>
+    </div>
+            </li>
+                    <li>
+                    at
+    <strong>
+        <abbr title="PHPUnit_TextUI_Command">PHPUnit_TextUI_Command</abbr>
+        ::main
+    </strong>
+    ()
+
+    <br />
+    in /usr/bin/phpunit at line 46&nbsp;
+    <a href="#" onclick="toggle('trace_0_23'); switchIcons('icon_0_23_open', 'icon_0_23_close'); return false;"><img class="toggle" id="icon_0_23_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: hidden" /><img class="toggle" id="icon_0_23_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: display; margin-left: -18px" /></a>    <div id="trace_0_23" style="display: none" class="trace">
+        <ol start="43"><li><code>&nbsp;&nbsp;&nbsp;&nbsp;require&nbsp;<span style="color: #DD0000">'/usr/share/php'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">DIRECTORY_SEPARATOR&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'PHPUnit'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">DIRECTORY_SEPARATOR&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'Autoload.php'</span><span style="color: #007700">;</span></code></li>
+<li><code>}</code></li>
+<li><code></code></li>
+<li class="selected"><code><span style="color: #0000BB">PHPUnit_TextUI_Command</span><span style="color: #007700">::</span><span style="color: #0000BB">main</span><span style="color: #007700">();</span></code></li>
+<li><code>
+</code></li></ol>
+    </div>
+            </li>
+            </ol>
+</div>
+    
+            <div class="block">
+            <div class="logs clear_fix">
+                <h2>
+                    Logs&nbsp;
+                    <a href="#" onclick="toggle('logs'); switchIcons('icon_logs_open', 'icon_logs_close'); return false;"><img class="toggle" id="icon_logs_open" alt="+" src="/bundles/framework/images/blue_picto_more.gif" style="visibility: hidden" /><img class="toggle" id="icon_logs_close" alt="-" src="/bundles/framework/images/blue_picto_less.gif" style="visibility: visible; margin-left: -18px" /></a></h2>
+                                    <div class="error_count">
+                        <span>
+                            1 error
+                        </span>
+                    </div>
+                
+            </div>
+
+            <div id="logs">
+                <ol class="traces logs">
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\RouterListener::onEarlyKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\TestSessionListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\SessionListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Component\Security\Http\Firewall::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\RouterListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Matched route &quot;BlueIconsFI_homepage&quot; (parameters: &quot;_controller&quot;: &quot;BlueIcons\FacebookInterfaceBundle\Controller\DefaultController::indexAction&quot;, &quot;_route&quot;: &quot;BlueIconsFI_homepage&quot;)
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\AsseticBundle\EventListener\RequestListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\DataCollector\RequestDataCollector::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Acme\DemoBundle\ControllerListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;JMS\SecurityExtraBundle\Controller\ControllerListener::onCoreController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.exception&quot; to listener &quot;Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelException&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.exception&quot; to listener &quot;Symfony\Component\HttpKernel\EventListener\ExceptionListener::onKernelException&quot;.
+        </li>
+            <li class="error">
+            ErrorException: Notice: Undefined index: HTTP_HOST in /var/www/blue-icons/vendor/lib/Facebook/base_facebook.php line 982 (uncaught exception) at /var/www/blue-icons/vendor/symfony/src/Symfony/Component/HttpKernel/Debug/ErrorHandler.php line 65
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\RouterListener::onEarlyKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\TestSessionListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\SessionListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Component\Security\Http\Firewall::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\EventListener\RouterListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.request&quot; to listener &quot;Symfony\Bundle\AsseticBundle\EventListener\RequestListener::onKernelRequest&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Symfony\Bundle\FrameworkBundle\DataCollector\RequestDataCollector::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;Acme\DemoBundle\ControllerListener::onKernelController&quot;.
+        </li>
+            <li>
+            Notified event &quot;kernel.controller&quot; to listener &quot;JMS\SecurityExtraBundle\Controller\ControllerListener::onCoreController&quot;.
+        </li>
+    </ol>
+            </div>
+
+        </div>
+    
+    
+</div>
+
+<script type="text/javascript">//<![CDATA[
+    function toggle(id, clazz) {
+        var el = document.getElementById(id),
+            current = el.style.display,
+            i;
+
+        if (clazz) {
+            var tags = document.getElementsByTagName('*');
+            for (i = tags.length - 1; i >= 0 ; i--) {
+                if (tags[i].className === clazz) {
+                    tags[i].style.display = 'none';
+                }
+            }
+        }
+
+        el.style.display = current === 'none' ? 'block' : 'none';
+    }
+
+    function switchIcons(id1, id2) {
+        var icon1, icon2, visibility1, visibility2;
+
+        icon1 = document.getElementById(id1);
+        icon2 = document.getElementById(id2);
+
+        visibility1 = icon1.style.visibility;
+        visibility2 = icon2.style.visibility;
+
+        icon1.style.visibility = visibility2;
+        icon2.style.visibility = visibility1;
+    }
+//]]></script>
+        </div>
+    </body>
+</html>
+.
+
+Time: 1 second, Memory: 13.75Mb
+
+[30;42m[2KOK (2 tests, 0 assertions)
+[0m[2K

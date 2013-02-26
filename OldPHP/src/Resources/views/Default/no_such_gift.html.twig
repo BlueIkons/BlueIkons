@@ -1,0 +1,9 @@
+{% extends 'BlueIconsFacebookInterfaceBundle::layout.html.twig' %}
+{% block content %}
+<div class="waiting-notice">No such gift</div>
+<script>
+    window.setInterval(function() {
+        window.location = '{{ path('BlueIconsFI_homepage') }}';
+    }, 5000);
+</script>
+{% endblock %}

@@ -1,0 +1,154 @@
+$(document).ready(function(){
+	$('.gifts li').click(function(){
+		if(!$(this).hasClass('checked')){
+			$('.gifts li').removeClass('checked');
+			$(this).addClass('checked');
+			$(this).parent().next().val(parseInt($(this).attr('rel')));
+		}
+		if($('#step2').hasClass('disabled')) {
+			$('#step2').removeClass('disabled');
+			$('.j-autocomplete input').removeAttr('disabled');
+		}
+	});
+	
+	$('#goto-paypal').click(function(){
+		if(!$(this).hasClass('disabled')){
+			// Paypal window here
+			$('.overlay').show();
+			$('#paypal-test').show();
+		}
+		return false;
+	});
+	
+	$('.j-popup-close').click(function(){
+		$('.popup').hide();
+		$('.overlay').hide();
+		return false;
+	});
+	
+    // Custom text field
+    $('.j-textfield').each (function (){
+        new TextField (this);
+    });
+	
+    // Custom textarea
+    $('.j-textarea').each (function (){
+        new Textarea (this);
+    });
+	
+    // Custom autocomplete
+    $('.j-autocomplete').each (function (){
+        new ACField (this);
+    });
+});
+
+/* Custom textarea */
+function Textarea (container){
+    var _this = this;
+    
+    this.container = $(container);
+	this.textarea = this.container.find('textarea');
+
+	this.placeholder = this.textarea.attr('rel');
+	this.textarea.addClass('placeholder');
+	this.textarea.attr('disabled', 'disabled');
+	
+	this.textarea.val(this.placeholder);
+	
+	this.textarea.focus(function(){
+		if($(this).val()==_this.placeholder){
+			$(this).val('');
+			$(this).removeClass('placeholder');
+		}
+	});
+	this.textarea.blur(function(){
+		if($(this).val()==''){
+			$(this).val(_this.placeholder);
+			$(this).addClass('placeholder');
+		}
+	});
+}
+/* /Custom text field */
+
+/* Custom text field */
+function TextField (container){
+    var _this = this;
+    
+    this.className = $(container).attr ('class');
+    this.container = $(container);
+    
+    this.container.wrap ('<div class="text-field-container ' + this.className + '"><div></div></div>');
+	this.placeholder = this.container.attr('rel');
+	this.container.addClass('placeholder');
+	this.container.val(this.placeholder);
+	
+	this.container.focus(function(){
+		if($(this).val()==_this.placeholder){
+			$(this).val('');
+			$(this).removeClass('placeholder');
+		}
+	});
+	this.container.blur(function(){
+		if($(this).val()==''){
+			$(this).val(_this.placeholder);
+			$(this).addClass('placeholder');
+		}
+	});
+}
+/* /Custom text field */
+
+/* Custom autocomplete */
+function ACField (container){
+    var _this = this;
+    
+    this.container = $(container);
+    this.className = this.container.attr ('class');
+	this.placeholder = this.container.attr('rel');
+	this.container.addClass('placeholder');
+	this.container.attr('disabled', 'disabled');
+	    
+    this.container.wrap ('<div class="text-acfield ' + this.className + '"><div></div></div>');
+	
+	this.container.autocomplete({
+		source: "search.php",
+		minLength: 2,
+		select: function( event, ui ) {
+			$('#person').html("<div><img src='" + ui.item.label + "' /> <span>" + ui.item.value + "</span> <div class='del'></div></div>");
+			$('#step3').removeClass('disabled');
+			$('.j-textarea').removeClass('disabled-textarea');
+			$('.j-textarea textarea').removeAttr('disabled');
+			$('#goto-paypal').removeClass('disabled');
+		}
+	}).data( "autocomplete" )._renderItem = function( ul, item ) {
+		return $( "<li></li>" )
+			.data( "item.autocomplete", item )
+			.append( "<a><img src='" + item.label + "' /> <span>" + item.value + "</span></a>" )
+			.appendTo( ul );
+	}
+	
+	this.container.val(this.placeholder);
+	
+	this.container.focus(function(){
+		if($(this).val()==_this.placeholder){
+			$(this).val('');
+			$(this).removeClass('placeholder');
+		}
+	});
+	this.container.blur(function(){
+		if($(this).val()==''){
+			$(this).val(_this.placeholder);
+			$(this).addClass('placeholder');
+		}
+	});
+	
+	$('#person .del').live('click', function(){
+		$('#person').html('');
+		_this.container.val('');
+		_this.container.trigger('blur');
+		$('#step3').addClass('disabled');
+		$('.j-textarea').addClass('disabled-textarea');
+		$('.j-textarea textarea').attr('disabled', 'disblaed');
+		$('#goto-paypal').addClass('disabled');
+	});
+}
+/* /Custom autocomplete */

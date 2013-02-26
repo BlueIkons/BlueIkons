@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BlueIkons.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head id="Head1" runat="server">
+    <title>BlueIkons</title>
+    <link href="BlueIkons.css" media="screen" rel="stylesheet" type="text/css" />  
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    <asp:HiddenField ID=hdredirect runat=server Value=0 />    
+    <asp:HiddenField ID=hdpopup runat=server Value=0 />
+
+    <script language=javascript>
+        function gotourl(theurl) {
+            top.location.href = theurl;
+        }
+
+        if (document.getElementById('ctl00_hdredirect').value != '0') {
+            gotourl(document.getElementById('ctl00_hdredirect').value);
+        }
+
+        if (document.getElementById('ctl00_hdpopup').value != '0') {
+            alert(document.getElementById('ctl00_hdpopup').value);
+        }        
+                
+    </script>            
+
+    <telerik:RadScriptManager ID="ScriptManager" runat="server" />            
+    
+        <span style=" text-align:right;"><asp:Label runat=server ID=lbluser></asp:Label></span>
+        <asp:ContentPlaceHolder ID="Body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    </div>
+    </form>
+</body>
+</html>
