@@ -253,9 +253,9 @@ namespace BlueIkons
                     //remember invitekey
                     HttpContext.Current.Session["invite"] = HttpContext.Current.Request.QueryString["invite"].ToString();
                 }
-
+                var pageName = Path.GetFileName(Request.PhysicalPath);
+                var url = "https://graph.facebook.com/oauth/authorize?client_id=" + ConfigurationManager.AppSettings.Get("fbAppID") + "&redirect_uri=" + ConfigurationManager.AppSettings.Get("App_URL") + pageName + "&scope=" + strrequiredAppPermissions;
                 //var url = authorizer.ge auth.GetLoginUrl(new HttpRequestWrapper(Request));
-                var url = "https://graph.facebook.com/oauth/authorize?client_id=" + ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + ConfigurationSettings.AppSettings.Get("App_URL").ToString() + "givegift.aspx&scope=" + strrequiredAppPermissions;
                 Uri newuri = new Uri(url);
                 var content = CanvasUrlBuilder.GetCanvasRedirectHtml(newuri);
                 HttpContext.Current.Response.ContentType = "text/html";
