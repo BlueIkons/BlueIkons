@@ -28,7 +28,7 @@ background-position:center; ">
         <br /><br /><br />
         That was fun! Now what?
         <br />
-        <a onclick="javascript:gotourl('http://apps.facebook.com/blueikons/default.aspx');" href="#">Send More BlueIkons</a>
+        <a href="default.aspx">Send More BlueIkons</a>
         <br />
         <a href="http://www.facebook.com/sharer.php
 ?u=http%3A%2F%2Fapps.facebook.com%2Fblueikons%2Fdefault.aspx
@@ -40,7 +40,7 @@ background-position:center; ">
         <br /><br />
         Now What?<br />
         <a href="http://www.PayPal.com">Check my PayPal Account</a><br />
-        <a href="http://apps.facebook.com/blueikons">Send More BlueIkons</a><br />
+        <a href="default.aspx">Send More BlueIkons</a><br />
         <a href="">Share BlueIkons with friends</a>
 
 

@@ -19,7 +19,7 @@ namespace BlueIkons
 {
     public partial class Site : System.Web.UI.MasterPage
     {
-        string thereturnpage = ConfigurationSettings.AppSettings.Get("App_URL").ToString() + "Default.aspx";
+        string thereturnpage = ConfigurationManager.AppSettings.Get("App_URL").ToString() + "Default.aspx";
         string[] requiredAppPermissions = { "email", "publish_stream", "offline_access" };
         string strrequiredAppPermissions = "email,publish_stream,offline_access";
         bool Live_Trial = Convert.ToBoolean(ConfigurationSettings.AppSettings.Get("Live_Demo").ToString());
@@ -155,8 +155,8 @@ namespace BlueIkons
 
             WebClient wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8; //This is if you have non english characters
-            //string result = wc.DownloadString("https://graph.facebook.com/oauth/access_token?response_type=token&client_secret=" + System.Configuration.ConfigurationSettings.AppSettings.Get("Secret").ToString() + "&client_id=" + System.Configuration.ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&code=" + oauth);
-            string strsend = "https://graph.facebook.com/oauth/access_token?client_id=" + System.Configuration.ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&client_secret=" + System.Configuration.ConfigurationSettings.AppSettings.Get("Secret").ToString() + "&code=" + oauth;
+            //string result = wc.DownloadString("https://graph.facebook.com/oauth/access_token?response_type=token&client_secret=" + ConfigurationManager.AppSettings.Get("Secret").ToString() + "&client_id=" + ConfigurationManager.AppSettings.Get("fbAppID").ToString() + "&code=" + oauth);
+            string strsend = "https://graph.facebook.com/oauth/access_token?client_id=" + ConfigurationManager.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&client_secret=" + ConfigurationManager.AppSettings.Get("Secret").ToString() + "&code=" + oauth;
             var url = "https://graph.facebook.com/oauth/authorize?client_id=" + ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + ConfigurationSettings.AppSettings.Get("App_URL").ToString() + "default.aspx&scope=" + strrequiredAppPermissions;
             string result = wc.DownloadString(url);
             string accesstoken = result.Replace("access_token=", "");
@@ -210,8 +210,8 @@ namespace BlueIkons
             CanvasAuthorizer authorizer;
             fbuser localfbuser = new fbuser();
             FacebookApp fbApp = new FacebookApp();
-            
 
+            
             authorizer = new CanvasAuthorizer();
             authorizer.Permissions = requiredAppPermissions;
             //if ((authorizer.Session != null) || ((HttpContext.Current.Request.QueryString["code"] != null) && (HttpContext.Current.Request.QueryString["code"] != "")))
@@ -253,10 +253,17 @@ namespace BlueIkons
                     //remember invitekey
                     HttpContext.Current.Session["invite"] = HttpContext.Current.Request.QueryString["invite"].ToString();
                 }
-                var pageName = Path.GetFileName(Request.PhysicalPath);
-                var url = "https://graph.facebook.com/oauth/authorize?client_id=" + ConfigurationManager.AppSettings.Get("fbAppID") + "&redirect_uri=" + ConfigurationManager.AppSettings.Get("App_URL") + pageName + "&scope=" + strrequiredAppPermissions;
+                var pageName = Path.GetFileName(HttpContext.Current.Request.PhysicalPath);
+                var urlSB = new StringBuilder();
+                urlSB.Append("https://graph.facebook.com/oauth/authorize?client_id=");
+                urlSB.Append(ConfigurationManager.AppSettings["fbAppID"]);
+                urlSB.Append("&redirect_uri=");
+                urlSB.Append(ConfigurationManager.AppSettings["App_URL"]);
+                urlSB.Append(pageName);
+                urlSB.Append("&scope=");
+                urlSB.Append(strrequiredAppPermissions);
                 //var url = authorizer.ge auth.GetLoginUrl(new HttpRequestWrapper(Request));
-                Uri newuri = new Uri(url);
+                Uri newuri = new Uri(urlSB.ToString());
                 var content = CanvasUrlBuilder.GetCanvasRedirectHtml(newuri);
                 HttpContext.Current.Response.ContentType = "text/html";
                 HttpContext.Current.Response.Write(content);
@@ -331,9 +338,9 @@ namespace BlueIkons
                 else
                 {
                     PopulatefbuserGraph();
-                    //string strredirecturl = "http://www.facebook.com/dialog/oauth?client_id=" + System.Configuration.ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&scope=email,publish_stream";
+                    //string strredirecturl = "http://www.facebook.com/dialog/oauth?client_id=" + ConfigurationManager.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&scope=email,publish_stream";
                     //hdredirect.Value = strredirecturl;
-                    //Response.Redirect("http://www.facebook.com/dialog/oauth?client_id=" + System.Configuration.ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&scope=email,publish_stream");
+                    //Response.Redirect("http://www.facebook.com/dialog/oauth?client_id=" + ConfigurationManager.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&scope=email,publish_stream");
                      
                 } */
 

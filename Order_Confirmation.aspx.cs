@@ -33,8 +33,8 @@ namespace BlueIkons
 
                     gift giftinfo = sitetemp.GetGiftInfo(Tx_Key);
 
-                    string strapprurl = ConfigurationSettings.AppSettings.Get("App_URL").ToString();
-                    string strpicurl = ConfigurationSettings.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png" ;
+                    string strapprurl = ConfigurationManager.AppSettings.Get("App_URL").ToString();
+                    string strpicurl = ConfigurationManager.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
                     if (giftinfo.fbpost)
                     {
                         DataSet dstemp2 = BlueIkons_DB.SPs.ViewFBUser(giftinfo.sender_fbid).GetDataSet();

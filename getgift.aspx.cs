@@ -12,13 +12,13 @@ namespace BlueIkons
     public partial class getgift : Telerik.Web.UI.RadAjaxPage
     {
         fbuser fbuser = new fbuser();
-        Site sitetemp = new Site();
-        string strapprurl = ConfigurationSettings.AppSettings.Get("App_URL").ToString();        
-        bool Live_Trial = Convert.ToBoolean(ConfigurationSettings.AppSettings.Get("Live_Demo").ToString());
+        Site siteTemp = new Site();
+        string strapprurl = ConfigurationManager.AppSettings.Get("App_URL").ToString();
+        bool Live_Trial = Convert.ToBoolean(ConfigurationManager.AppSettings.Get("Live_Demo").ToString());
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            fbuser = sitetemp.getfbuser();
+            fbuser = siteTemp.getfbuser();
             if (!IsPostBack)
             {
                 //populate charities info
@@ -30,7 +30,7 @@ namespace BlueIkons
                     lblcharityname.Text = dstemp.Tables[0].Rows[0]["Charity_Name"].ToString();
                     lblcharitydescription.Text = dstemp.Tables[0].Rows[0]["Charity_Description"].ToString();
                     hdcharityemail.Value = dstemp.Tables[0].Rows[0]["Charity_Email"].ToString();
-                    gift giftinfo = sitetemp.GetGiftInfo(giftkey);
+                    gift giftinfo = siteTemp.GetGiftInfo(giftkey);
                     lblamount.Text = string.Format("{0:C}", giftinfo.amount);
                     lblhumanid.Text = giftkey.ToString();
                     lblgiftid.Text = giftinfo.Gift_Key.ToString();
@@ -38,12 +38,12 @@ namespace BlueIkons
 
                     lblinfo.Text = giftkey.ToString();
                     //check if gift is still good
-                    if (sitetemp.Gifthasbeenreceived(giftkey))
+                    if (siteTemp.Gifthasbeenreceived(giftkey))
                     {
                         Response.Redirect("givegift.aspx?fbid=" + fbuser.UID.ToString() + "&alert=1");
                     }
                     PayPal pp = new PayPal();
-                    Transactions txinfo = sitetemp.Gettx(giftinfo.txkey);
+                    Transactions txinfo = siteTemp.Gettx(giftinfo.txkey);
                     if (!pp.PreapprovalActive(txinfo.pakey, Live_Trial,giftinfo.txkey))
                     {
                         //Is not active
@@ -79,7 +79,7 @@ namespace BlueIkons
             //Pay it forward
             DataSet dstemp = BlueIkons_DB.SPs.ViewFbidpendinggifts(fbuser.UID).GetDataSet();
             int giftkey = Convert.ToInt32(dstemp.Tables[0].Rows[0]["Gift_Key"]);
-            gift giftinfo = sitetemp.GetGiftInfo(giftkey);
+            gift giftinfo = siteTemp.GetGiftInfo(giftkey);
 
             PayPal pa = new PayPal();
             if (pa.ParallelPayment(Live_Trial, giftinfo, hdcharityemail.Value))
@@ -97,8 +97,8 @@ namespace BlueIkons
                     string receivername = giftinfo.receiver_name;
                     string strmessage = "Paid it Forward";
                     string strdescription = "You too can send a gift by clicking on the image. BlueIkons. Faster than a GiftCard...and more Fun!";
-                    string strpicurl = ConfigurationSettings.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
-                    sitetemp.Facebook_PostLink_OnWall(giftinfo.receiver_fbid.ToString(), strapprurl, strmessage, strpicurl, "BlueIkons, Faster than a Gift Card and more Fun!", accesstoken, "", strdescription);
+                    string strpicurl = ConfigurationManager.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
+                    siteTemp.Facebook_PostLink_OnWall(giftinfo.receiver_fbid.ToString(), strapprurl, strmessage, strpicurl, "BlueIkons, Faster than a Gift Card and more Fun!", accesstoken, "", strdescription);
                 }
             }
             else
@@ -119,7 +119,7 @@ namespace BlueIkons
 
             DataSet dstemp = BlueIkons_DB.SPs.ViewFbidpendinggifts(fbuser.UID).GetDataSet();
             int giftkey = Convert.ToInt32(dstemp.Tables[0].Rows[0]["Gift_Key"]);
-            gift giftinfo = sitetemp.GetGiftInfo(giftkey);
+            gift giftinfo = siteTemp.GetGiftInfo(giftkey);
             PayPal pa = new PayPal();
             if (pa.ParallelPayment(Live_Trial, giftinfo, txtppemail.Text))
             {
@@ -136,8 +136,8 @@ namespace BlueIkons
                     string receivername = giftinfo.receiver_name;
                     string strmessage = giftinfo.witty_message; //receivername + " received a gift on BlueIkons";
                     string strdescription = "You too can send a gift by clicking on the image. BlueIkons. Faster than a GiftCard...and more Fun!";
-                    string strpicurl = ConfigurationSettings.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
-                    sitetemp.Facebook_PostLink_OnWall(giftinfo.receiver_fbid.ToString(), strapprurl, strmessage, strpicurl, "BlueIkons, Faster than a Gift Card and more Fun!", accesstoken, "", strdescription);
+                    string strpicurl = ConfigurationManager.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
+                    siteTemp.Facebook_PostLink_OnWall(giftinfo.receiver_fbid.ToString(), strapprurl, strmessage, strpicurl, "BlueIkons, Faster than a Gift Card and more Fun!", accesstoken, "", strdescription);
                 }
             }
             else

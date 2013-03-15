@@ -26,19 +26,19 @@ namespace BlueIkons
 
             if (Live_Trial)//true = Live , false = trial
             {
-                profile2.Environment = System.Configuration.ConfigurationSettings.AppSettings.Get("Live_Environment").ToString();
-                profile2.ApplicationID = System.Configuration.ConfigurationSettings.AppSettings.Get("AppID_Live").ToString();
-                profile2.APIUsername = System.Configuration.ConfigurationSettings.AppSettings.Get("APIUsername_Live").ToString();
-                profile2.APIPassword = System.Configuration.ConfigurationSettings.AppSettings.Get("APIPassword_Live").ToString();
-                profile2.APISignature = System.Configuration.ConfigurationSettings.AppSettings.Get("APISignature_Live").ToString();
+                profile2.Environment = ConfigurationManager.AppSettings.Get("Live_Environment").ToString();
+                profile2.ApplicationID = ConfigurationManager.AppSettings.Get("AppID_Live").ToString();
+                profile2.APIUsername = ConfigurationManager.AppSettings.Get("APIUsername_Live").ToString();
+                profile2.APIPassword = ConfigurationManager.AppSettings.Get("APIPassword_Live").ToString();
+                profile2.APISignature = ConfigurationManager.AppSettings.Get("APISignature_Live").ToString();
             }
             else
             {
-                profile2.Environment = System.Configuration.ConfigurationSettings.AppSettings.Get("Trial_Environment").ToString();
-                profile2.ApplicationID = System.Configuration.ConfigurationSettings.AppSettings.Get("AppID").ToString();
-                profile2.APIUsername = System.Configuration.ConfigurationSettings.AppSettings.Get("APIUsername").ToString();
-                profile2.APIPassword = System.Configuration.ConfigurationSettings.AppSettings.Get("APIPassword").ToString();
-                profile2.APISignature = System.Configuration.ConfigurationSettings.AppSettings.Get("APISignature").ToString();
+                profile2.Environment = ConfigurationManager.AppSettings.Get("Trial_Environment").ToString();
+                profile2.ApplicationID = ConfigurationManager.AppSettings.Get("AppID").ToString();
+                profile2.APIUsername = ConfigurationManager.AppSettings.Get("APIUsername").ToString();
+                profile2.APIPassword = ConfigurationManager.AppSettings.Get("APIPassword").ToString();
+                profile2.APISignature = ConfigurationManager.AppSettings.Get("APISignature").ToString();
             }
             profile2.RequestDataformat = "SOAP11";
             profile2.ResponseDataformat = "SOAP11";
@@ -109,19 +109,19 @@ namespace BlueIkons
 
             if (Live_Trial)//true = Live , false = trial
             {
-                profile2.Environment = System.Configuration.ConfigurationSettings.AppSettings.Get("Live_Environment").ToString();
-                profile2.ApplicationID = System.Configuration.ConfigurationSettings.AppSettings.Get("AppID_Live").ToString();
-                profile2.APIUsername = System.Configuration.ConfigurationSettings.AppSettings.Get("APIUsername_Live").ToString();
-                profile2.APIPassword = System.Configuration.ConfigurationSettings.AppSettings.Get("APIPassword_Live").ToString();
-                profile2.APISignature = System.Configuration.ConfigurationSettings.AppSettings.Get("APISignature_Live").ToString();
+                profile2.Environment = ConfigurationManager.AppSettings.Get("Live_Environment").ToString();
+                profile2.ApplicationID = ConfigurationManager.AppSettings.Get("AppID_Live").ToString();
+                profile2.APIUsername = ConfigurationManager.AppSettings.Get("APIUsername_Live").ToString();
+                profile2.APIPassword = ConfigurationManager.AppSettings.Get("APIPassword_Live").ToString();
+                profile2.APISignature = ConfigurationManager.AppSettings.Get("APISignature_Live").ToString();
             }
             else
             {
-                profile2.Environment = System.Configuration.ConfigurationSettings.AppSettings.Get("Trial_Environment").ToString();
-                profile2.ApplicationID = System.Configuration.ConfigurationSettings.AppSettings.Get("AppID").ToString();
-                profile2.APIUsername = System.Configuration.ConfigurationSettings.AppSettings.Get("APIUsername").ToString();
-                profile2.APIPassword = System.Configuration.ConfigurationSettings.AppSettings.Get("APIPassword").ToString();
-                profile2.APISignature = System.Configuration.ConfigurationSettings.AppSettings.Get("APISignature").ToString();
+                profile2.Environment = ConfigurationManager.AppSettings.Get("Trial_Environment").ToString();
+                profile2.ApplicationID = ConfigurationManager.AppSettings.Get("AppID").ToString();
+                profile2.APIUsername = ConfigurationManager.AppSettings.Get("APIUsername").ToString();
+                profile2.APIPassword = ConfigurationManager.AppSettings.Get("APIPassword").ToString();
+                profile2.APISignature = ConfigurationManager.AppSettings.Get("APISignature").ToString();
             }
             profile2.RequestDataformat = "SOAP11";
             profile2.ResponseDataformat = "SOAP11";
@@ -136,7 +136,7 @@ namespace BlueIkons
                 amount = amount + amountblueikon + amountfee1 + amountfee2;
                 amount = decimal.Round(amount, 2);
 
-                string url = System.Configuration.ConfigurationSettings.AppSettings.Get("App_URL").ToString() ;
+                string url = ConfigurationManager.AppSettings.Get("App_URL").ToString() ;
                 string returnURL = "http://www.blueikons.com/Order_Confirmation.aspx?Tx_key=" + Tx_Key.ToString();
                 string cancelURL = url;
                 preapprovalRequest = new PreapprovalRequest();
@@ -223,21 +223,21 @@ namespace BlueIkons
             
             if (Live_Trial)//true = Live , false = trial
             {
-                profile2.Environment = System.Configuration.ConfigurationSettings.AppSettings.Get("Live_Environment").ToString();
-                profile2.ApplicationID = System.Configuration.ConfigurationSettings.AppSettings.Get("AppID_Live").ToString();
-                profile2.APIUsername = System.Configuration.ConfigurationSettings.AppSettings.Get("APIUsername_Live").ToString();
-                profile2.APIPassword = System.Configuration.ConfigurationSettings.AppSettings.Get("APIPassword_Live").ToString();
-                profile2.APISignature = System.Configuration.ConfigurationSettings.AppSettings.Get("APISignature_Live").ToString();
-                blueikonemail = ConfigurationSettings.AppSettings.Get("My_Email_Live").ToString();
+                profile2.Environment = ConfigurationManager.AppSettings.Get("Live_Environment").ToString();
+                profile2.ApplicationID = ConfigurationManager.AppSettings.Get("AppID_Live").ToString();
+                profile2.APIUsername = ConfigurationManager.AppSettings.Get("APIUsername_Live").ToString();
+                profile2.APIPassword = ConfigurationManager.AppSettings.Get("APIPassword_Live").ToString();
+                profile2.APISignature = ConfigurationManager.AppSettings.Get("APISignature_Live").ToString();
+                blueikonemail = ConfigurationManager.AppSettings.Get("My_Email_Live").ToString();
             }
             else
             {
-                profile2.Environment = System.Configuration.ConfigurationSettings.AppSettings.Get("Trial_Environment").ToString();
-                profile2.ApplicationID = System.Configuration.ConfigurationSettings.AppSettings.Get("AppID").ToString();
-                profile2.APIUsername = System.Configuration.ConfigurationSettings.AppSettings.Get("APIUsername").ToString();
-                profile2.APIPassword = System.Configuration.ConfigurationSettings.AppSettings.Get("APIPassword").ToString();
-                profile2.APISignature = System.Configuration.ConfigurationSettings.AppSettings.Get("APISignature").ToString();                
-                blueikonemail = ConfigurationSettings.AppSettings.Get("My_Email_Trial").ToString();
+                profile2.Environment = ConfigurationManager.AppSettings.Get("Trial_Environment").ToString();
+                profile2.ApplicationID = ConfigurationManager.AppSettings.Get("AppID").ToString();
+                profile2.APIUsername = ConfigurationManager.AppSettings.Get("APIUsername").ToString();
+                profile2.APIPassword = ConfigurationManager.AppSettings.Get("APIPassword").ToString();
+                profile2.APISignature = ConfigurationManager.AppSettings.Get("APISignature").ToString();
+                blueikonemail = ConfigurationManager.AppSettings.Get("My_Email_Trial").ToString();
             }
             /*profile2.RequestDataformat = "SOAP11";
             profile2.ResponseDataformat = "SOAP11";
@@ -246,7 +246,7 @@ namespace BlueIkons
 
             profile2.IsTrustAllCertificates = Convert.ToBoolean(ConfigurationManager.AppSettings["TrustAll"]);
 
-            string url = System.Configuration.ConfigurationSettings.AppSettings.Get("Callback").ToString() + "/";
+            string url = ConfigurationManager.AppSettings.Get("Callback").ToString() + "/";
             string returnURL = url + "Order_Confirmation.aspx?Tx_key=" + Tx_Key.ToString();
             string cancelURL = url + "Order_Confirmation.aspx?Tx_key=0";
 

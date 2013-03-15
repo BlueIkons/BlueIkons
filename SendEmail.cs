@@ -14,7 +14,7 @@ namespace BlueIkons
             string EmailFrom;
             if (From == "")// put the from address here
             {
-                EmailFrom = System.Configuration.ConfigurationSettings.AppSettings.Get("Default_Email_From").ToString();
+                EmailFrom = ConfigurationManager.AppSettings.Get("Default_Email_From").ToString();
             }
             else
             {
@@ -65,8 +65,8 @@ namespace BlueIkons
                 strsubject = fbuser.Firstname + " " + fbuser.Lastname + " has sent you a BlueIkons gift of " + decimal.Round(giftinfo.amount,2).ToString();
                 stremailaddress = giftinfo.receiver_email;
             }
-            string strpicurl = ConfigurationSettings.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
-            string strapprurl = ConfigurationSettings.AppSettings.Get("App_URL").ToString() + "getgift.aspx?invite=" + giftkey.ToString();
+            string strpicurl = ConfigurationManager.AppSettings.Get("BlueIkons_Pics").ToString() + giftinfo.blueikon.ToString() + ".png";
+            string strapprurl = ConfigurationManager.AppSettings.Get("App_URL").ToString() + "getgift.aspx?invite=" + giftkey.ToString();
 
             thebody = thebody.Replace("FIRSTNAME", fbuser.Firstname);
             thebody = thebody.Replace("LASTNAME", fbuser.Lastname);

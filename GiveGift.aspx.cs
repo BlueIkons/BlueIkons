@@ -15,10 +15,10 @@ namespace BlueIkons
 {
     public partial class GiveGift : Telerik.Web.UI.RadAjaxPage
     {
-        string thereturnpage = ConfigurationSettings.AppSettings.Get("App_URL").ToString() + "GiveGift.aspx";
+        string thereturnpage = ConfigurationManager.AppSettings.Get("App_URL").ToString() + "GiveGift.aspx";
         fbuser fbuser = new fbuser();
         Site sitetemp = new Site();
-        bool Live_Trial = Convert.ToBoolean(ConfigurationSettings.AppSettings.Get("Live_Demo").ToString());
+        bool Live_Trial = Convert.ToBoolean(ConfigurationManager.AppSettings.Get("Live_Demo").ToString());
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -94,8 +94,8 @@ namespace BlueIkons
 
             WebClient wc = new WebClient();
             wc.Encoding = System.Text.Encoding.UTF8; //This is if you have non english characters
-            //string result = wc.DownloadString("https://graph.facebook.com/oauth/access_token?response_type=token&client_secret=" + System.Configuration.ConfigurationSettings.AppSettings.Get("Secret").ToString() + "&client_id=" + System.Configuration.ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&code=" + oauth);
-            string strsend = "https://graph.facebook.com/oauth/access_token?client_id=" + System.Configuration.ConfigurationSettings.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&client_secret=" + System.Configuration.ConfigurationSettings.AppSettings.Get("Secret").ToString() + "&code=" + oauth;
+            //string result = wc.DownloadString("https://graph.facebook.com/oauth/access_token?response_type=token&client_secret=" + ConfigurationManager.AppSettings.Get("Secret").ToString() + "&client_id=" + ConfigurationManager.AppSettings.Get("fbAppID").ToString() + "&code=" + oauth);
+            string strsend = "https://graph.facebook.com/oauth/access_token?client_id=" + ConfigurationManager.AppSettings.Get("fbAppID").ToString() + "&redirect_uri=" + thereturnpage + "&client_secret=" + ConfigurationManager.AppSettings.Get("Secret").ToString() + "&code=" + oauth;
             string result = wc.DownloadString(strsend);
             string accesstoken = result.Replace("access_token=", "");
             int endofaccesstoken = accesstoken.IndexOf("&expire");
